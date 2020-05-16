@@ -28,6 +28,7 @@ gem 'image_processing', '~> 1.2'
 ##### Custom Gem Area
 gem 'devise', '~> 4.7', '>= 4.7.1'
 gem 'simple_form', '~> 5.0', '>= 5.0.2'
+gem 'faker', '~> 2.11'
 #####
 
 # Reduces boot times through caching; required in config/boot.rb
