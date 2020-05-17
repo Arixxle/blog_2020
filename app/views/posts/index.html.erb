@@ -2,9 +2,9 @@
   <div class="flickr_pagination">
     <%= will_paginate @posts, :container => false %>
   </div>
-
-    <% @posts.each do |post| %>
-    <div class="row">
+  <% @posts.each do |post| %>
+  <div class="row">
+      <div class="col-8 mx-auto">
         <div class="card mb-3">
             <img class="card-img-top" src="<%= url_for post.optimized_image(post.thumbnail, 1200, 360) %>" alt="Blog Post Image Card" />
             <div class="card-body">
@@ -22,6 +22,7 @@
                 </p>
             </div>
         </div>
-    </div>
-    <% end %>
+      </div>
+  </div>
+  <% end %>
 </div>
