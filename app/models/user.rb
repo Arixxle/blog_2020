@@ -8,4 +8,10 @@ class User < ApplicationRecord
   def username
     return email.split('@')[0].capitalize
   end
+
+  def comment_created
+    self.number_of_commentd = number_of_comments + 1
+    save
+    number_of_comments
+  end
 end
