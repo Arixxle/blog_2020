@@ -29,6 +29,9 @@ gem 'image_processing', '~> 1.2'
 gem 'devise', '~> 4.7', '>= 4.7.1'
 gem 'simple_form', '~> 5.0', '>= 5.0.2'
 gem 'faker', '~> 2.11'
+gem 'will_paginate', '~> 3.3'
+gem 'friendly_id', '~> 5.3'
+gem 'babosa', '~> 1.0', '>= 1.0.3'
 #####
 
 # Reduces boot times through caching; required in config/boot.rb
