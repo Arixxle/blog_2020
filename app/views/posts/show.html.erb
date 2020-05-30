@@ -24,7 +24,7 @@
 <!-- Form -->
   <%= render 'comments/form', commentable: @post, local: Comment.new %>
 <!-- All the comments -->
-  <div class="comment-pane">
+  <div id="comment-pane">
     <% @comments.each do |comment| %>
       <%= render comment %>
     <% end %>

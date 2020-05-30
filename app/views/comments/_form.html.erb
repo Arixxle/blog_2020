@@ -3,7 +3,7 @@
     <%= form_with model: [commentable, local] do |f| %>
       <div class="form-group">
         <%= f.rich_text_area :body, placeholder: "Say something...", 
-                                    class: 'reply-form-#{commentable.id}',
+                                    class: "reply-form-#{commentable.id}",
                                     id: f.object.object_id,
                                     method: :patch
                                      %>
