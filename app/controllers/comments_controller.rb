@@ -4,13 +4,15 @@ class CommentsController < ApplicationController
   before_action :authenticate_user!
 
   def create
-    @comment = @commetable.comment.build(comment_params)
+    @comment = @commentable.comments.build(comment_params)
     @comment.user = current_user
     @comment.reply = true if params[:comment_id]
     @comment.save
   end
+
   def edit
   end
+
   def update
     if @comment.edit_history == ''
       # if 'n => replace ;n with <br></br>'
@@ -20,9 +22,11 @@ class CommentsController < ApplicationController
     end
     @comment.update(comment_params)
   end
+
   def destroy
     @comment.destroy
   end
+
   def history
     
   end

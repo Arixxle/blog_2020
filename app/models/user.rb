@@ -11,7 +11,7 @@ class User < ApplicationRecord
   end
 
   def comment_created
-    self.number_of_commentd = number_of_comments + 1
+    self.number_of_comments = number_of_comments + 1
     save
     number_of_comments
   end
