@@ -3,9 +3,16 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  
+  has_many :comments, dependent: :destroy
+  has_one_attached :avatar
   # joseph@example.com -> self.email.split('@') -> ["joseph", "example.com"] -> [0] ->"joseph".capitalize -> "Joseph"
   def username
     return email.split('@')[0].capitalize
+  end
+
+  def comment_created
+    self.number_of_comments = number_of_comments + 1
+    save
+    number_of_comments
   end
 end
