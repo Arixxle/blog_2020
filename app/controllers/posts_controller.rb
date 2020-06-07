@@ -6,7 +6,6 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all.order("created_at DESC").paginate(page: params[:page])
-
   end
 
   # GET /posts/1
@@ -15,6 +14,10 @@ class PostsController < ApplicationController
     views = @post.views + 1
     @post.update(views: views)
     @comments = @post.comments.order("created_at DESC")
+    @num_comments = @post.comments.count
+    @post.comments.each do |comment|
+      @num_comments += comment.comments.count
+    end
   end
 
   # GET /posts/new
