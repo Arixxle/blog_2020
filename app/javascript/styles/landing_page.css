@@ -8,7 +8,7 @@ img {
   vertical-align: bottom;
 }
 body {
-  background-color: #E7F8F2;
+  background-color: #E7F8F2!important;
 }
 h1, h2, h3, h4, h5 {
   font-family: 'Noto Sans TC','Open Sans', sans-serif;
