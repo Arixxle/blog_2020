@@ -18,7 +18,7 @@ class CommentsController < ApplicationController
       # if 'n => replace ;n with <br></br>'
       @comment.edit_history = "original: " + @comment.body.body.to_plain_text + "\n"
     else
-      @comment.edit_history = @comment.edit + "Edit: " + params[:comment][:body] + "\n"
+      @comment.edit_history = @comment.edit_history + "Edit: " + params[:comment][:body] + "\n"
     end
     @comment.update(comment_params)
   end
