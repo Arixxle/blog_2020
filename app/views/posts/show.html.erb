@@ -9,7 +9,11 @@
           <%= link_to @post.title, root_path %>
         </h1>
         <p class="lead">
-          <%= @post.updated_at.strftime("%A, %B %e, %Y") %> by <%= @post.user.username %> | <%= pluralize(@post.views, "View") %>
+          <%= @post.updated_at.strftime("%A, %B %e, %Y") %> by <%= @post.user.username %> | <%= pluralize(@post.views, "View") %> |
+                <%= pluralize(@num_comments, "Comment") %> |
+                <% if current_user && (current_user.admin || current.user == @post.user)%>
+                <%= link_to "Delete", @post, method: :delete %>
+                <% end %>
         </p>
         <hr class="my-4" />
         <div class="post_body">
