@@ -6,8 +6,6 @@ gem 'foreman', '~> 0.87.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3'
 
-# Use PostegreSQL instead sqlite3 on heroku
-gem 'pg', '~> 1.2', '>= 1.2.3'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -38,11 +36,16 @@ gem 'babosa', '~> 1.0', '>= 1.0.3'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+group :production do
+  # Use PostegreSQL instead sqlite3 on heroku
+  gem 'pg', '~> 1.2', '>= 1.2.3'
+end
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Use sqlite3 as the database for Active Record
-  # gem 'sqlite3', '~> 1.4'
+  gem 'sqlite3', '~> 1.4'
 end
 
 group :development do
