@@ -17,7 +17,7 @@ require("styles")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 import "bootstrap";
-import "./src/application.scss";
+// import "./src/application.scss";
 global.$ = jQuery;
 require("trix")
 require("@rails/actiontext")

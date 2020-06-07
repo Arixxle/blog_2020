@@ -30,16 +30,19 @@ p {
   background-color: rgb(255, 215, 210);
 }
 #gp-banner {
-  margin-bottom: 200px;
+  /* margin-bottom: 200px; */
   position: relative;
 }
+#banner-img {
+  width: 100%;
+}
 #banner-img img{
-  width: 500px;
+  width: 100%;
 }
 #banner-tx {
-  /* position: absolute;
+  position: absolute;
   right: 0;
-  bottom: -30%; */
+  bottom: 20%;
 }
 .collapse .navbar-nav .nav-item:hover {
   background-color: rgb(255, 215, 210);
@@ -52,6 +55,7 @@ p {
 }
 #gp-fate {
   background-color: #1b2c37;
+  padding: 100px 0px;
   /* position: relative; */
 }
 #fate-img {
@@ -130,13 +134,10 @@ p {
 }
 #gp-chance {
   background-color: #F8E5DF;
-  height: 50vh;
+  padding: 100px 0px;
 }
 #chance-img {
   position: relative;
-}
-#chance-tx {
-  order: -1;
 }
 #chance-img img {
   /* position: absolute; */
@@ -150,7 +151,7 @@ p {
   height: 366px;
   perspective: 1000px;
   position: absolute;
-  bottom: -30%;
+  bottom: -50%;
   z-index: 1;
   padding: 0;
   cursor: pointer;
@@ -189,6 +190,8 @@ p {
 }
 #chance-tx {
   padding: 50px 50px 0px;
+  order: -1;
+
 }
 #chance-tx a {
   text-decoration: none;
