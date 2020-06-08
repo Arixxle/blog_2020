@@ -1,0 +1,38 @@
+.container {
+  background-color: #fff;
+}
+#gp-header, #gp-quote {
+  background-color: #43434B;
+  color: #fff;
+  padding: 20px;
+  .hd-avatar {
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  .hd-txt {
+    padding: 10px;
+  }
+  .hd-info {
+    padding: 10px;
+  }
+}
+#gp-skill {
+  padding: 10px;
+}
+#gp-portfolio {
+  padding: 10px;
+  .pf-item {
+    margin: 10px 0;
+    p {
+      padding: 0 10px;
+    }
+  }
+}
+#gp-experience {
+  padding: 10px;
+}
+#gp-others {
+  padding: 10px;
+}

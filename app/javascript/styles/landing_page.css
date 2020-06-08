@@ -10,9 +10,9 @@ img {
 body {
   background-color: #E7F8F2!important;
 }
+
 h1, h2, h3, h4, h5 {
   font-family: 'Noto Sans TC','Open Sans', sans-serif;
-  margin-bottom: 20px;
 }
 p {
   font-family: 'Noto Sans TC','Open Sans', sans-serif;
@@ -321,5 +321,5 @@ p {
 
 #ld-footer {
   background-color: #99BCD0;
-  height: 30px;
+  /* height: 30px; */
 }

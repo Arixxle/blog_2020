@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   # root 'posts#index'
-  root 'lands#index'
+  # root 'lands#index'
   get 'about', to: 'pages#about'
+  root'pages#index'
 end

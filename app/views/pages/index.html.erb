@@ -1,5 +1,5 @@
 
-  <div class="container-fluid">
+  <div id="page-landing" class="container-fluid">
     <div id="gp-banner" class="row">
       <div id="banner-img">
           <img src="pic/banner2.jpg" alt="banner">
@@ -48,16 +48,16 @@
       <!-- <div id="chance-img" class="col-12 col-md-5">
         <img src="pic/chance-no-shadow.png" alt="">
       </div> -->
-      <div id="#chance-img" class="col-12 col-md-5">
+      <div id="chance-img" class="col-12 col-md-5">
         <div class="chance-flip-card">
           <div class="chance-flip-card-inner">
             <div class="chance-flip-card-front">
               <img src="pic/chance-no-shadow.png" alt="">
             </div>
-            <div class="chance-flip-card-back">
-              <h1>John Doe</h1> 
+            <div id="chance-flip" class="chance-flip-card-back">
+              <!-- <h1>John Doe</h1> 
               <p>Architect & Engineer</p> 
-              <p>We love that guy</p>
+              <p>We love that guy</p> -->
             </div>
           </div>
         </div>
@@ -177,18 +177,13 @@
         </form>
       </div>
     </div>
-    <div id="ld-footer" class="row">
-      <div class="d-block mx-auto">
-        <footer>
-          <small>Hung Tse Yang Copyright &copy 2020. All Rights Reserved.</small>
-        </footer>
-      </div>
-    </div>
   </div>
 
   <script>
     let flipFate = document.querySelector('#fate-img')
+    let chanceFate = document.querySelector('#chance-img')
     let flipFateBack = document.querySelector('#fate-flip')
+    let flipChanceBack = document.querySelector('#chance-flip')
 
     flipFate.addEventListener('mouseenter', () => {
       let accImg = document.createElement('img')
@@ -197,7 +192,18 @@
     })
     flipFate.addEventListener('mouseleave', () => {
       setTimeout(() => {
-      flipFateBack.innerHTML = ''
+        flipFateBack.innerHTML = ''
+      }, 500);
+    })
+
+    chanceFate.addEventListener('mouseenter', () => {
+      let chanceImg = document.createElement('img')
+      chanceImg.src = `pic/c0${getRandom(9)}.png`
+      flipChanceBack.appendChild(chanceImg)
+    })
+    chanceFate.addEventListener('mouseleave', () => {
+      setTimeout(() => {
+        flipChanceBack.innerHTML = ''
       }, 500);
     })
 
