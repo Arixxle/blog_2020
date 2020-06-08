@@ -15,16 +15,16 @@
       </div>
     </div>
     <div id="gp-fate" class="row">
-      <div id="#fate-img" class="col-12 col-md-4">
+      <div id="fate-img" class="col-12 col-md-4">
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
               <img src="pic/fate-no-shadow.png" alt="">
             </div>
-            <div class="flip-card-back">
-              <h1>John Doe</h1> 
+            <div id="fate-flip"class="flip-card-back">
+              <!-- <h1>John Doe</h1> 
               <p>Architect & Engineer</p> 
-              <p>We love that guy</p>
+              <p>We love that guy</p> -->
             </div>
           </div>
         </div>
@@ -185,3 +185,26 @@
       </div>
     </div>
   </div>
+
+  <script>
+    let flipFate = document.querySelector('#fate-img')
+    let flipFateBack = document.querySelector('#fate-flip')
+
+    flipFate.addEventListener('mouseenter', () => {
+      let accImg = document.createElement('img')
+      accImg.src = `pic/a0${getRandom(9)}.png`
+      flipFateBack.appendChild(accImg)
+    })
+    flipFate.addEventListener('mouseleave', () => {
+      setTimeout(() => {
+      flipFateBack.innerHTML = ''
+      }, 500);
+    })
+
+    // console.log(flipFateBack);
+
+
+    function getRandom(x){
+      return Math.floor(Math.random()*x)+1;
+    };
+  </script>
