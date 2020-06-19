@@ -61,6 +61,12 @@ p {
 #fate-img {
   position: relative;
 }
+#fate-flip, #chance-flip {
+  padding: 60px 30px;
+}
+#fate-flip img, #chance-flip img {
+  width: 100%;
+}
 .flip-card {
   background-color: transparent;
   width: 258px;
