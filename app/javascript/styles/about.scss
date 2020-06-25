@@ -60,7 +60,44 @@
 }
 #gp-experience {
   padding: 10px;
+  #ex-content {
+    ul {
+      margin-left: 30px;
+      li {
+        position: relative;
+      }
+      li::before {
+        display: block;
+        content: '';
+        width: 6px;
+        height: 6px;
+        background-color: #ecb51b;
+        border-radius: 50%;
+        position: absolute;
+        left: -15px;
+        top: 35%;
+      }
+    }
+  }
 }
 #gp-others {
   padding: 10px;
+  #other-items {
+    ul {
+      position: relative;
+      li {
+        padding-left: 20px;
+      }
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 3px;
+        background-color: #ecb51b;
+        width: 5px;
+        height: 100%;
+      }
+    }
+  }
 }

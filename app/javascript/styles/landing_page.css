@@ -20,11 +20,18 @@ p {
   margin-bottom: 0;
 }
 #ld-nav{
-  background-color: #99BCD0;
+  background-color: #1b2c37;
   padding: 0 5px;
 }
+.navbar-brand img {
+  margin: 0px 20px;
+  width: 35px;
+}
+.navbar-nav .nav-link {
+  color: #cddfea;
+}
 #nav-drop {
-  background-color: #99BCD0;
+  background-color: #1b2c37;
 }
 #nav-drop a:hover {
   background-color: rgb(255, 215, 210);
@@ -49,9 +56,15 @@ p {
   box-shadow: 0 5px 10px rgba(0,0,0, 0.1);
   transition: ease 0.5s;
 }
-.collapse .navbar-nav .nav-item:hover a {
+.collapse .navbar-nav .nav-item:hover a:first-child {
   color: #000;
   transition: ease 0.3s;
+}
+#nav-drop a {
+  color: #cddfea;
+}
+#nav-drop a:hover {
+  color: #000;
 }
 #gp-fate {
   background-color: #1b2c37;
@@ -326,6 +339,6 @@ p {
 }
 
 #ld-footer {
-  background-color: #99BCD0;
+  background-color: #1b2c37;
   /* height: 30px; */
 }
