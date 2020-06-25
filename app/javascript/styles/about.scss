@@ -10,23 +10,51 @@
     height: 120px;
     overflow: hidden;
     border-radius: 50%;
+    img {
+      width: 120px;
+    }
   }
   .hd-txt {
     padding: 10px;
   }
   .hd-info {
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    p {
+      font-size: 16px;
+      i {
+        font-size: 22px;
+        margin-right: 8px;
+      }
+    }
   }
 }
 #gp-skill {
   padding: 10px;
+  #skill-items {
+    position: relative;
+    padding-left: 40px;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 20px;
+      background-color: #ecb51b;
+      width: 5px;
+      height: 100%;
+    }
+  }
 }
 #gp-portfolio {
   padding: 10px;
   .pf-item {
     margin: 10px 0;
-    p {
-      padding: 0 10px;
+    img {
+      width: 200px;
+      margin-right: 5px;
     }
   }
 }
