@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :lands, only: [:index]
+  resources :services, only: [:index]
 
   resources :posts do
     resources :comments
